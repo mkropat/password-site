@@ -1,0 +1,6 @@
+[submodule "marx"]
+	path = marx
+	url = https://github.com/mblode/marx.git
+[submodule "secure-random-password"]
+	path = secure-random-password
+	url = https://github.com/rackerlabs/secure-random-password.git
