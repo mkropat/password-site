@@ -27,6 +27,23 @@ input.exactly {
   width: 130px;
 }
 
+.password {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.password > button {
+  margin-left: 20px;
+}
+
+.copy {
+  padding: 4px 10px 0 10px;
+}
+
+.copy > img {
+  height: 28px;
+}
+
 #error {
   color: red;
 }
@@ -36,6 +53,6 @@ input.exactly {
   width: 100px;
 }
 
-#passwords button {
+#regenerate {
   margin-top: 18px;
 }

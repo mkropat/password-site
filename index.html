@@ -14,14 +14,38 @@
     <p>Password generator built on the <a href="https://www.npmjs.com/package/secure-random-password">secure-random-password</a> library. Uses the cryptographically secure random number generator <a href="https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues">built-in to your browser</a>.</p>
 
     <section id="passwords">
-      <input readonly />
-      <input readonly />
-      <input readonly />
-      <input readonly />
-      <input readonly />
-      <input readonly />
-      <input readonly />
-      <input readonly />
+      <div class="password">
+        <input readonly />
+        <button class="copy"><img alt="copy to clipboard" src="img/copy.svg" /></button>
+      </div>
+      <div class="password">
+        <input readonly />
+        <button class="copy"><img alt="copy to clipboard" src="img/copy.svg" /></button>
+      </div>
+      <div class="password">
+        <input readonly />
+        <button class="copy"><img alt="copy to clipboard" src="img/copy.svg" /></button>
+      </div>
+      <div class="password">
+        <input readonly />
+        <button class="copy"><img alt="copy to clipboard" src="img/copy.svg" /></button>
+      </div>
+      <div class="password">
+        <input readonly />
+        <button class="copy"><img alt="copy to clipboard" src="img/copy.svg" /></button>
+      </div>
+      <div class="password">
+        <input readonly />
+        <button class="copy"><img alt="copy to clipboard" src="img/copy.svg" /></button>
+      </div>
+      <div class="password">
+        <input readonly />
+        <button class="copy"><img alt="copy to clipboard" src="img/copy.svg" /></button>
+      </div>
+      <div class="password">
+        <input readonly />
+        <button class="copy"><img alt="copy to clipboard" src="img/copy.svg" /></button>
+      </div>
 
       <p><button id="regenerate">Regenerate</button></p>
     </section>
@@ -106,6 +130,10 @@
 
       document.getElementById('regenerate')
         .addEventListener('click', () => passwordStore.regenerate());
+
+      for (let button of document.querySelectorAll('button.copy')) {
+        button.addEventListener('click', copyToClipboard);
+      }
     })();
   </script>
 </body>

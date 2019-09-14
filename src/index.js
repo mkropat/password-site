@@ -1,6 +1,7 @@
 import marx from 'marx-css/css/marx.min.css';
 import * as secureRandomPassword from 'secure-random-password';
 
+import copyToClipboard from './copy-to-clipboard';
 import style from './site.css';
 
 const displayPasswords = ({ getPasswordBoxes, passwordStore, settings }) => {
@@ -172,6 +173,7 @@ const mergeObjects = (...objects) => Object.create(
 
 const range = n => [...Array(n).keys()];
 
+window.copyToClipboard = copyToClipboard;
 window.createPasswordStore = createPasswordStore;
 window.createSettings = createSettings;
 window.displayPasswords = displayPasswords;
