@@ -1,4 +1,5 @@
 import marx from 'marx-css/css/marx.min.css';
+import secureRandom from 'secure-random';
 import * as secureRandomPassword from 'secure-random-password';
 
 import copyToClipboard from './copy-to-clipboard';
@@ -177,4 +178,5 @@ window.copyToClipboard = copyToClipboard;
 window.createPasswordStore = createPasswordStore;
 window.createSettings = createSettings;
 window.displayPasswords = displayPasswords;
+window.secureRandom = secureRandom;
 window.secureRandomPassword = secureRandomPassword;
