@@ -4,7 +4,7 @@
   "description": "",
   "dependencies": {
     "marx-css": "^3.0.8",
-    "secure-random-password": "^0.1.0"
+    "secure-random-password": "^0.2.3"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^5.1.2",
