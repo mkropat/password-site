@@ -15,6 +15,7 @@
     "webpack-cli": "^4.8.0"
   },
   "scripts": {
+    "dist": "rm -r dist/* && webpack",
     "start": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
