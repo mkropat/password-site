@@ -14,9 +14,11 @@ module.exports = {
     ],
   },
   plugins: [
-    new CopyPlugin([
-      { from: 'img', to: 'img' },
-    ]),
+    new CopyPlugin({
+      patterns: [
+        { from: 'img', to: 'img' },
+      ]
+    }),
     new HtmlWebpackPlugin({
       inject: 'head',
       template: 'index.html',
