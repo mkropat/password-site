@@ -108,7 +108,7 @@
   </footer>
 
   <script>
-    (() => {
+    window.addEventListener('DOMContentLoaded', () => {
       'use strict';
 
       const getPasswordBoxes = () => document.getElementById('passwords')
@@ -141,7 +141,7 @@
       for (let button of document.querySelectorAll('button.copy')) {
         button.addEventListener('click', copyToClipboard);
       }
-    })();
+    });
   </script>
 </body>
 </html>
