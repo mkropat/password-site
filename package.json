@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "",
   "dependencies": {
-    "marx-css": "^3.0.8",
+    "marx-css": "^4.0.1",
     "secure-random-password": "^0.2.3"
   },
   "devDependencies": {
