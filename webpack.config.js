@@ -1,7 +1,7 @@
-const path = require('path');
-const CopyPlugin = require('copy-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const path = require('path')
+const CopyPlugin = require('copy-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
   mode: 'production',
@@ -17,18 +17,16 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         { from: 'img', to: 'img' },
-      ]
+      ],
     }),
     new HtmlWebpackPlugin({
       inject: 'head',
       template: 'index.html',
     }),
-    new MiniCssExtractPlugin({
-      filename: "[name].[contenthash].css",
-    }),
+    new MiniCssExtractPlugin({ filename: '[name].[contenthash].css' }),
   ],
   output: {
     filename: '[name].[contenthash].js',
-    path: path.resolve(__dirname, 'dist')
-  }
-};
+    path: path.resolve(__dirname, 'dist'),
+  },
+}
