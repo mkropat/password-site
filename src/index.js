@@ -22,7 +22,7 @@ const displayPasswords = ({ getPasswordBoxes, passwordStore, settings }) => {
 }
 
 const createPasswordStore = ({ settings, numPasswords, onChange }) => ({
-  _state: {},
+  _state: new Map,
 
   get passwords() {
     let characters = settings.classes
@@ -30,19 +30,19 @@ const createPasswordStore = ({ settings, numPasswords, onChange }) => ({
       .map(({ characters, exactly }) => ({ characters, exactly }))
     let key = JSON.stringify({ characters, length: settings.length })
 
-    if (!this._state.hasOwnProperty(key)) {
-      this._state[key] = range(numPasswords)
+    if (!this._state.has(key)) {
+      this._state.set(key, range(numPasswords)
         .map(() => secureRandomPassword.randomPassword({
           characters,
           length: settings.length,
-        }))
+        })))
     }
 
-    return this._state[key]
+    return this._state.get(key)
   },
 
   regenerate() {
-    this._state = {}
+    this._state = new Map
     onChange()
   },
 })
@@ -53,7 +53,8 @@ const createSettings = (opts) => {
   let classesSettings = createCharacterClassesSetting({
     ...opts,
     onChange: () => {
-      opts.onChange(); classesOnChange()
+      opts.onChange()
+      classesOnChange()
     },
   })
   let errorSettings = createErrorFeedback(opts)
